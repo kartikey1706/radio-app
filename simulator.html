@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0d1117;
+            color: #c9d1d9;
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            padding: 16px;
+            background-color: #161b22;
+        }
+        .logo {
+            fill: #ffffff;
+            width: 32px;
+            height: 32px;
+            margin-right: 16px;
+        }
+        .nav-items {
+            display: flex;
+            gap: 16px;
+        }
+        .nav-items a {
+            color: #c9d1d9;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .search-bar {
+            margin-left: auto;
+            margin-right: 16px;
+        }
+        .search-bar input {
+            background-color: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            color: #c9d1d9;
+            padding: 5px 12px;
+            font-size: 14px;
+            width: 240px;
+        }
+        .buttons {
+            display: flex;
+            gap: 8px;
+        }
+        .buttons button {
+            background-color: #21262d;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            color: #c9d1d9;
+            padding: 5px 16px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .buttons button.sign-up {
+            background-color: #238636;
+            border-color: #238636;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <svg class="logo" height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" data-view-component="true">
+            <path d=""></path>
+        </svg>
+        <div class="nav-items">
+            <a href="product.html">information</a>
+            <a href="about.html">About</a>
+            <a href="#">Resources</a>
+            <a href="#">Open Source</a>
+            <a href="#">Enterprise</a>
+            <a href="#">Pricing</a>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search or jump to...">
+        </div>
+        <div class="buttons">
+            <button>Sign in</button>
+            <button class="sign-up">Sign up</button>
+        </div>
+    </nav>
+    </nav>
+</div>
+<body></body>
+    <div class="container">
+        <h1>LMR Communication Simulator</h1>
+        <div class="control-panel">
+            <button id="connectBtn">Connect to LMR</button>
+            <button id="disconnectBtn" disabled>Disconnect</button>
+        </div>
+        <div class="communication-panel">
+            <div class="received-messages">
+                <h2>Received Messages</h2>
+                <ul id="messageList"></ul>
+            </div>
+            <div class="transmit-panel">
+                <h2>Transmit</h2>
+                <input type="text" id="messageInput" placeholder="Enter your message">
+                <button id="transmitBtn" disabled>Transmit Text</button>
+                <button id="voiceTransmitBtn" disabled>Start Voice Transmission</button>
+            </div>
+        </div>
+    </div>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #0d1117;
+    color: #72c4dd
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+}
+
+h1 {
+    color: #ffffff;
+    text-align: center;
+}
+
+.control-panel, .communication-panel {
+    background: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+button {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.received-messages {
+    margin-bottom: 20px;
+    color: crimson;
+}
+
+#messageList {
+    list-style-type: none;
+    padding: 0;
+    color: crimson;
+}
+
+#messageList li {
+    background: #f4f4f4;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 3px;
+}
+    </style>
+    <script >
+        class LMRCommunication {
+    constructor() {
+        this.isConnected = false;
+        this.isTransmitting = false;
+    }
+
+    connect() {
+        // Simulate connecting to LMR
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                this.isConnected = true;
+                resolve();
+            }, 1000);
+        });
+    }
+
+    disconnect() {
+        // Simulate disconnecting from LMR
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                this.isConnected = false;
+                resolve();
+            }, 1000);
+        });
+    }
+
+    transmit(message) {
+        // Simulate transmitting a message
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                resolve();
+            }, 500);
+        });
+    }
+
+    startVoiceTransmission() {
+        // Simulate starting voice transmission
+        this.isTransmitting = true;
+    }
+
+    stopVoiceTransmission() {
+        // Simulate stopping voice transmission
+        this.isTransmitting = false;
+    }
+}
+
+const lmr = new LMRCommunication();
+
+// DOM Elements
+const connectBtn = document.getElementById('connectBtn');
+const disconnectBtn = document.getElementById('disconnectBtn');
+const transmitBtn = document.getElementById('transmitBtn');
+const voiceTransmitBtn = document.getElementById('voiceTransmitBtn');
+const messageInput = document.getElementById('messageInput');
+const messageList = document.getElementById('messageList');
+
+// Event Listeners
+connectBtn.addEventListener('click', async () => {
+    await lmr.connect();
+    updateUI();
+    simulateIncomingMessages();
+});
+
+disconnectBtn.addEventListener('click', async () => {
+    await lmr.disconnect();
+    updateUI();
+});
+
+transmitBtn.addEventListener('click', async () => {
+    const message = messageInput.value.trim();
+    if (message) {
+        await lmr.transmit(message);
+        addMessage(`Transmitted: ${message}`);
+        messageInput.value = '';
+    }
+});
+
+voiceTransmitBtn.addEventListener('click', () => {
+    if (lmr.isTransmitting) {
+        lmr.stopVoiceTransmission();
+        voiceTransmitBtn.textContent = 'Start Voice Transmission';
+    } else {
+        lmr.startVoiceTransmission();
+        voiceTransmitBtn.textContent = 'Stop Voice Transmission';
+    }
+});
+
+function updateUI() {
+    connectBtn.disabled = lmr.isConnected;
+    disconnectBtn.disabled = !lmr.isConnected;
+    transmitBtn.disabled = !lmr.isConnected;
+    voiceTransmitBtn.disabled = !lmr.isConnected;
+    messageInput.disabled = !lmr.isConnected;
+}
+
+function addMessage(message) {
+    const li = document.createElement('li');
+    li.textContent = message;
+    messageList.appendChild(li);
+}
+
+function simulateIncomingMessages() {
+    if (lmr.isConnected) {
+        setTimeout(() => {
+            addMessage(`Received: Simulated incoming message ${Math.floor(Math.random() * 1000)}`);
+            simulateIncomingMessages();
+        }, Math.random() * 5000 + 1000);
+    }
+}
+
+updateUI();
+    </script>
+</body>
+<style>
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #0d1117;
+        color: #72c4dd;
+    }
+    .footer {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 40px 16px;
+    }
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+    .footer-column {
+        flex: 1;
+    }
+    .footer-column h2 {
+        font-size: 16px;
+        margin-bottom: 16px;
+    }
+    .footer-column ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    .footer-column ul li {
+        margin-bottom: 8px;
+    }
+    .footer-column ul li a {
+        color: #8b949e;
+        text-decoration: none;
+        font-size: 14px;
+    }
+    .footer-column ul li a:hover {
+        color: #58a6ff;
+        text-decoration: underline;
+    }
+    .subscribe {
+        max-width: 300px;
+    }
+    .subscribe h2 {
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+    .subscribe p {
+        font-size: 14px;
+        color: #8b949e;
+        margin-bottom: 16px;
+    }
+    .subscribe-button {
+        display: inline-block;
+        padding: 8px 16px;
+        font-size: 14px;
+        color: #c9d1d9;
+        background-color: transparent;
+        border: 1px solid #30363d;
+        border-radius: 6px;
+        text-decoration: none;
+    }
+    .subscribe-button:hover {
+        border-color: #8b949e;
+    }
+    .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 40px;
+        border-top: 1px solid #30363d;
+        font-size: 12px;
+        color: #8b949e;
+    }
+    .footer-bottom-links a {
+        color: #8b949e;
+        text-decoration: none;
+        margin-right: 16px;
+    }
+    .footer-bottom-links a:hover {
+        text-decoration: underline;
+    }
+    .social-icons a {
+        color: #8b949e;
+        text-decoration: none;
+        margin-left: 16px;
+    }
+</style>
+</head>
+<body>
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-column subscribe">
+            <h2>Radiofusion X</h2>
+            <h3>Subscribe to our newsletter</h3>
+            <p>Get tips, technical guides, and best practices. Twice a month. Right in your inbox.</p>
+            <a href="#" class="subscribe-button">Subscribe</a>
+        </div>
+        <div class="footer-column">
+            <h2>Product</h2>
+            <ul>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Enterprise</a></li>
+                <li><a href="#">Copilot</a></li>
+                <li><a href="#">Security</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="#">Roadmap</a></li>
+                <li><a href="#">Compare Radiofusion X</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h2>Platform</h2>
+            <ul>
+                <li><a href="#">Developer</a></li>
+                <li><a href="#">Partners</a></li>
+                <li><a href="#">Education</a></li>
+                <li><a href="#">Radiofusion X CLI</a></li>
+                <li><a href="#">Radiofusion X Desktop</a></li>
+                <li><a href="#">Radiofusion X Mobile</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h2>Support Radiofusion X</h2>
+            <ul>
+                <li><a href="#">Docs</a></li>
+                <li><a href="#">Community Forum</a></li>
+                <li><a href="#">Professional Services</a></li>
+                <li><a href="#">Premium Support</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Status</a></li>
+                <li><a href="#">Contact Radiofusion X</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h2>Company</h2>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Customer stories</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">The ReadME Project</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Newsroom</a></li>
+                <li><a href="#">Inclusion</a></li>
+                <li><a href="#">Social Impact</a></li>
+                <li><a href="#">Shop</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="footer-bottom-links">
+            <span>© 2024 Radiofusion X, Inc.</span>
+            <a href="#">Terms</a>
+            <a href="#">Privacy (Updated 9/2024)</a>
+            <a href="#">Sitemap</a>
+            <a href="#">What is Radiofusion X?</a>
+            <a href="#">Manage cookies</a>
+            <a href="#">Do not share my personal information</a>
+        </div>
+        <div class="social-icons">
+            <a href="#" class="social-icon" aria-label="Twitter">
+                <i data-lucide="twitter" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="social-icon" aria-label="Facebook">
+                <i data-lucide="facebook" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="social-icon" aria-label="LinkedIn">
+                <i data-lucide="linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="social-icon" aria-label="YouTube">
+                <i data-lucide="youtube" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="social-icon" aria-label="Twitch">
+                <i data-lucide="twitch" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="social-icon" aria-label="TikTok">
+                <i data-lucide="music" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="social-icon" aria-label="GitHub">
+                <i data-lucide="github" aria-hidden="true"></i>
+            </a>
+            <style>
+        .social-bar {
+            display: flex;
+            gap: 20px;
+        }
+        .social-icon {
+            color: #ffffff;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+        .social-icon:hover {
+            opacity: 1;
+        }
+            </style>
+            <script src="https://unpkg.com/lucide@latest"></script>
+        </div>
+        
+    </div>
+</footer>
+</body>
+</body>
+</body>
+</html>
+</body>
+</html>

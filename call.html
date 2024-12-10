@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <body>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #0d1117;
+                color: #c9d1d9;
+            }
+            .navbar {
+                display: flex;
+                align-items: center;
+                padding: 16px;
+                background-color: #161b22;
+            }
+            .logo {
+                fill: #ffffff;
+                width: 32px;
+                height: 32px;
+                margin-right: 16px;
+            }
+            .nav-items {
+                display: flex;
+                gap: 16px;
+            }
+            .nav-items a {
+                color: #c9d1d9;
+                text-decoration: none;
+                font-size: 14px;
+            }
+            .search-bar {
+                margin-left: auto;
+                margin-right: 16px;
+            }
+            .search-bar input {
+                background-color: #0d1117;
+                border: 1px solid #30363d;
+                border-radius: 6px;
+                color: #c9d1d9;
+                padding: 5px 12px;
+                font-size: 14px;
+                width: 240px;
+            }
+            .buttons {
+                display: flex;
+                gap: 8px;
+            }
+            .buttons button {
+                background-color: #21262d;
+                border: 1px solid #30363d;
+                border-radius: 6px;
+                color: #c9d1d9;
+                padding: 5px 16px;
+                font-size: 14px;
+                cursor: pointer;
+            }
+            .buttons button.sign-up {
+                background-color: #238636;
+                border-color: #238636;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar">
+            <svg class="logo" height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" data-view-component="true">
+                <path d=""></path>
+            </svg>
+            <div class="nav-items">
+                <a href="product.html">information</a>
+            <a href="about.html">About</a>
+            <a href="#">Resources</a>
+            <a href="#">Open Source</a>
+            <a href="#">Enterprise</a>
+            <a href="#">Pricing</a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search or jump to...">
+            </div>
+            <div class="buttons">
+                <button>Sign in</button>
+                <button class="sign-up">Sign up</button>
+            </div>
+        </nav>
+        </nav>
+    </div>
+    <div class="container"></div>
+        <h1 style="color: #3fb950;">Voice Call simulator</h1>
+        <div class="call-container">
+            <input type="text" id="remoteId" placeholder="Enter remote peer ID" style="width: 200px; height: 30px;">
+            <button id="callButton">Call</button>
+            <button id="hangupButton" disabled>Hang Up</button>
+        </div>
+        <div class="status" id="status">Not connected</div>
+        <audio id="remoteAudio" autoplay></audio>
+    </div>
+    <style>
+
+        .call-container {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+input {
+    flex-grow: 1;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.status {
+    font-weight: bold;
+    margin-top: 1rem;
+}
+    </style>
+    </body>
+    </body>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-column subscribe">
+                <h2 style="color: #72c4dd;">Radiofusion X</h2>
+                <h3 style="color: #72c4dd;">Subscribe to our newsletter</h3>
+                <p>Get tips, technical guides, and best practices. Twice a month. Right in your inbox.</p>
+                <a href="#" class="subscribe-button">Subscribe</a>
+            </div>
+            <div class="footer-column">
+                <h2 style="color: #72c4dd;">Product</h2>
+                <ul>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Enterprise</a></li>
+                    <li><a href="#">Copilot</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="#">Roadmap</a></li>
+                    <li><a href="#">Compare Radiofusion X</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h2 style="color: #72c4dd;">Platform</h2>
+                <ul>
+                    <li><a href="#">Developer</a></li>
+                    <li><a href="#">Partners</a></li>
+                    <li><a href="#">Education</a></li>
+                    <li><a href="#">Radiofusion X CLI</a></li>
+                    <li><a href="#">Radiofusion X Desktop</a></li>
+                    <li><a href="#">Radiofusion X Mobile</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h2 style="color: #72c4dd;">Support Radiofusion X</h2>
+                <ul>
+                    <li><a href="#">Docs</a></li>
+                    <li><a href="#">Community Forum</a></li>
+                    <li><a href="#">Professional Services</a></li>
+                    <li><a href="#">Premium Support</a></li>
+                    <li><a href="#">Skills</a></li>
+                    <li><a href="#">Status</a></li>
+                    <li><a href="#">Contact Radiofusion X</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h2 style="color: #72c4dd;">Company</h2>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Customer stories</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">The ReadME Project</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Newsroom</a></li>
+                    <li><a href="#">Inclusion</a></li>
+                    <li><a href="#">Social Impact</a></li>
+                    <li><a href="#">Shop</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-links">
+                <span>© 2024 Radiofusion X, Inc.</span>
+                <a href="#">Terms</a>
+                <a href="#">Privacy (Updated 9/2024)</a>
+                <a href="#">Sitemap</a>
+                <a href="#">What is Radiofusion X?</a>
+                <a href="#">Manage cookies</a>
+                <a href="#">Do not share my personal information</a>
+            </div>
+            <div class="social-icons">
+                <a href="#" class="social-icon" aria-label="Twitter">
+                    <i data-lucide="twitter" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="Facebook">
+                    <i data-lucide="facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="LinkedIn">
+                    <i data-lucide="linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="YouTube">
+                    <i data-lucide="youtube" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="Twitch">
+                    <i data-lucide="twitch" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="TikTok">
+                    <i data-lucide="music" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="GitHub">
+                    <i data-lucide="github" aria-hidden="true"></i>
+                </a>
+                <style>
+                    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #0d1117;
+        color: #c9d1d9;
+    }
+    .footer {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 40px 16px;
+    }
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+    .footer-column {
+        flex: 1;
+    }
+    .footer-column h2 {
+        font-size: 16px;
+        margin-bottom: 16px;
+    }
+    .footer-column ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    .footer-column ul li {
+        margin-bottom: 8px;
+    }
+    .footer-column ul li a {
+        color: #8b949e;
+        text-decoration: none;
+        font-size: 14px;
+    }
+    .footer-column ul li a:hover {
+        color: #58a6ff;
+        text-decoration: underline;
+    }
+    .subscribe {
+        max-width: 300px;
+    }
+    .subscribe h2 {
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+    .subscribe p {
+        font-size: 14px;
+        color: #8b949e;
+        margin-bottom: 16px;
+    }
+    .subscribe-button {
+        display: inline-block;
+        padding: 8px 16px;
+        font-size: 14px;
+        color: #c9d1d9;
+        background-color: transparent;
+        border: 1px solid #30363d;
+        border-radius: 6px;
+        text-decoration: none;
+    }
+    .subscribe-button:hover {
+        border-color: #8b949e;
+    }
+    .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 40px;
+        border-top: 1px solid #30363d;
+        font-size: 12px;
+        color: #8b949e;
+    }
+    .footer-bottom-links a {
+        color: #8b949e;
+        text-decoration: none;
+        margin-right: 16px;
+    }
+    .footer-bottom-links a:hover {
+        text-decoration: underline;
+    }
+    .social-icons a {
+        color: #8b949e;
+        text-decoration: none;
+        margin-left: 16px;
+    }
+            .social-bar {
+                display: flex;
+                gap: 20px;
+            }
+            .social-icon {
+                color: #ffffff;
+                opacity: 0.7;
+                transition: opacity 0.3s ease;
+            }
+            .social-icon:hover {
+                opacity: 1;
+            }
+                </style>
+                <script src="https://unpkg.com/lucide@latest"></script>
+            </div>
+            
+        </div>
+    </footer>
+    </body>
+    </body>
+    </html>
+    <script src="https://unpkg.com/peerjs@1.4.7/dist/peerjs.min.js"></script>
+    <script>
+        let peer;
+let call;
+const remoteAudio = document.getElementById('remoteAudio');
+const status = document.getElementById('status');
+const remoteIdInput = document.getElementById('remoteId');
+const callButton = document.getElementById('callButton');
+const hangupButton = document.getElementById('hangupButton');
+
+// Initialize peer connection
+function init() {
+    peer = new Peer();
+    
+    peer.on('open', (id) => {
+        status.textContent = `Your peer ID is: ${id}`;
+    });
+
+    peer.on('call', (incomingCall) => {
+        call = incomingCall;
+        navigator.mediaDevices.getUserMedia({ audio: true, video: false })
+            .then((stream) => {
+                call.answer(stream);
+                handleCall();
+            })
+            .catch((err) => {
+                console.error('Failed to get local stream', err);
+            });
+    });
+}
+
+// Handle the call
+function handleCall() {
+    call.on('stream', (remoteStream) => {
+        remoteAudio.srcObject = remoteStream;
+    });
+
+    call.on('close', () => {
+        status.textContent = 'Call ended';
+        hangupButton.disabled = true;
+        callButton.disabled = false;
+    });
+
+    status.textContent = 'Connected';
+    hangupButton.disabled = false;
+    callButton.disabled = true;
+}
+
+// Make a call
+callButton.addEventListener('click', () => {
+    const remotePeerId = remoteIdInput.value;
+    if (remotePeerId) {
+        navigator.mediaDevices.getUserMedia({ audio: true, video: false })
+            .then((stream) => {
+                call = peer.call(remotePeerId, stream);
+                handleCall();
+            })
+            .catch((err) => {
+                console.error('Failed to get local stream', err);
+            });
+    } else {
+        alert('Please enter a remote peer ID');
+    }
+});
+
+// Hang up the call
+hangupButton.addEventListener('click', () => {
+    if (call) {
+        call.close();
+        status.textContent = 'Call ended';
+        hangupButton.disabled = true;
+        callButton.disabled = false;
+    }
+});
+
+// Initialize the app
+init();
+    </script>
+</body>
+</html>
